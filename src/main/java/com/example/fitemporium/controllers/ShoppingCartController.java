@@ -25,8 +25,8 @@ public class ShoppingCartController {
   }
 
   @DeleteMapping("/{id}")
-  public void deleteShoppingCart(@PathVariable Long ID_Carrito){
-    shoppingCartService.eliminarListaCarrito(ID_Carrito);
+  public void deleteShoppingCart(@PathVariable Long id_carrito){
+    shoppingCartService.eliminarListaCarrito(id_carrito);
   }
 
 }

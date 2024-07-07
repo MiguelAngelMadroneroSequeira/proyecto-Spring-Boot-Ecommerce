@@ -22,7 +22,7 @@ public class ShoppingCartService {
     return  shoppingCartRepository.save(lista);
   }
 
-  public void eliminarListaCarrito(Long ID_Carrito){
-    shoppingCartRepository.deleteById(ID_Carrito);
+  public void eliminarListaCarrito(Long id_carrito){
+    shoppingCartRepository.deleteById(id_carrito);
   }
 }

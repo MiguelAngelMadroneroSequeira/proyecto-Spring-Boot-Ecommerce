@@ -8,7 +8,7 @@ public class ShoppingCart {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long ID_Carrito;
+  private Long id_carrito;
 
   @Column (name = "Valor_Total", nullable = false)
   private Float valor_total;
@@ -17,24 +17,24 @@ public class ShoppingCart {
   private Integer cantidad;
 
   @Column (name = "ID_Producto", nullable = false)
-  private Long ID_Producto;
+  private Long id_producto;
 
   public ShoppingCart() {
   }
 
-  public ShoppingCart(Long ID_Carrito, Float valor_total, Integer cantidad, Long ID_Producto) {
-    this.ID_Carrito = ID_Carrito;
+  public ShoppingCart(Long id_carrito, Float valor_total, Integer cantidad, Long id_producto) {
+    this.id_carrito = id_carrito;
     this.valor_total = valor_total;
     this.cantidad = cantidad;
-    this.ID_Producto = ID_Producto;
+    this.id_producto = id_producto;
   }
 
   public Long getID_Carrito() {
-    return ID_Carrito;
+    return id_carrito;
   }
 
-  public void setID_Carrito(Long ID_Carrito) {
-    this.ID_Carrito = ID_Carrito;
+  public void setID_Carrito(Long id_carrito) {
+    this.id_carrito = id_carrito;
   }
 
   public Float getValor_total() {
@@ -54,10 +54,10 @@ public class ShoppingCart {
   }
 
   public Long getID_Producto() {
-    return ID_Producto;
+    return id_producto;
   }
 
-  public void setID_Producto(Long ID_Producto) {
-    this.ID_Producto = ID_Producto;
+  public void setID_Producto(Long id_producto) {
+    this.id_producto = id_producto;
   }
 }

@@ -12,7 +12,7 @@ import java.util.List;
 public class ClientesService {
   @Autowired
   private ClientesRepository clientesRepository;
-  private List <Clientes> listaClientes;
+
 
   public List<Clientes> getListaClientes(){
     return clientesRepository.findAll();

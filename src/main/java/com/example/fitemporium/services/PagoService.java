@@ -12,9 +12,9 @@ import java.util.List;
 public class PagoService {
   @Autowired
   private PagoRepository pagoRepository;
-  private List<Pago> listaOrdenes;
 
-  public List<Pago> getListaPagos(){
+  public List<Pago>getListaPagos(){
+
     return pagoRepository.findAll();
   }
 
@@ -22,7 +22,7 @@ public class PagoService {
     return pagoRepository.save(pago);
   }
 
-  public void eliminarPago(Long pagoId){
+  public void eliminarPago(Integer pagoId){
     pagoRepository.deleteById(pagoId);
   }
 }

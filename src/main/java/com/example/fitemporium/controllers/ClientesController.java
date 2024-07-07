@@ -10,12 +10,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Clientes")
+
 public class ClientesController {
   @Autowired
   private ClientesService clientesService;
 
   @GetMapping("/obtener")
   public List<Clientes> getAllClientes(){
+
     return clientesService.getListaClientes();
   }
 

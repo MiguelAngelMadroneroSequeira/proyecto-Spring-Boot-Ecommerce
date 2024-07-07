@@ -13,18 +13,14 @@ import java.util.List;
 @RequestMapping("/pagos")
 public class PagoController {
 
+  @Autowired
   private PagoService pagoService;
 
-  @Autowired
-
-  public PagoController(PagoService pagoService) {
-    this.pagoService = pagoService;
-
-  }
 
   @GetMapping("/obtener")
   public List<Pago> getAllPagos(){
     return pagoService.getListaPagos();
+
   }
 
   @PostMapping("/agregar")
@@ -33,7 +29,7 @@ public class PagoController {
   }
 
   @DeleteMapping("/{id}")
-  public void deletePago(Long pagoId){
+  public void deletePago(int pagoId){
     pagoService.eliminarPago(pagoId);
   }
 }
