@@ -1,8 +1,8 @@
-package com.example.fitemporium.Controller;
+package com.example.fitemporium.controllers;
 
 
-import com.example.fitemporium.Model.ShoppingCart;
-import com.example.fitemporium.Service.ShoppingCartService;
+import com.example.fitemporium.models.ShoppingCart;
+import com.example.fitemporium.services.ShoppingCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

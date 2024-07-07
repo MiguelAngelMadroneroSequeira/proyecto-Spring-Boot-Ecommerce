@@ -1,8 +1,8 @@
-package com.example.fitemporium.Service;
+package com.example.fitemporium.services;
 
 
-import com.example.fitemporium.Model.Clientes;
-import com.example.fitemporium.Repository.ClientesRepository;
+import com.example.fitemporium.models.Clientes;
+import com.example.fitemporium.repositories.ClientesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

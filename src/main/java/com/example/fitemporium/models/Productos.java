@@ -1,7 +1,6 @@
-package com.example.fitemporium.Model;
+package com.example.fitemporium.models;
 
 import jakarta.persistence.*;
-import org.apache.catalina.util.Introspection;
 
 @Entity
 @Table(name = "Productos")

@@ -1,8 +1,8 @@
-package com.example.fitemporium.Controller;
+package com.example.fitemporium.controllers;
 
 
-import com.example.fitemporium.Model.Clientes;
-import com.example.fitemporium.Service.ClientesService;
+import com.example.fitemporium.models.Clientes;
+import com.example.fitemporium.services.ClientesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

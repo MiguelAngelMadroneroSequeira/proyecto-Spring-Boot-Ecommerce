@@ -1,4 +1,4 @@
-package com.example.fitemporium.Model;
+package com.example.fitemporium.models;
 
 import jakarta.persistence.*;
 

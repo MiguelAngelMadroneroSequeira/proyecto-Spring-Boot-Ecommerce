@@ -1,8 +1,8 @@
-package com.example.fitemporium.Service;
+package com.example.fitemporium.services;
 
 
-import com.example.fitemporium.Model.Pagos;
-import com.example.fitemporium.Repository.PagosRepository;
+import com.example.fitemporium.models.Pagos;
+import com.example.fitemporium.repositories.PagosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

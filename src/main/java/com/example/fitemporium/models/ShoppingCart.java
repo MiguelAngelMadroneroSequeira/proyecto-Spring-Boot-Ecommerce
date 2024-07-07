@@ -1,4 +1,4 @@
-package com.example.fitemporium.Model;
+package com.example.fitemporium.models;
 
 import jakarta.persistence.*;
 
@@ -14,7 +14,7 @@ public class ShoppingCart {
   private Float valor_total;
 
   @Column (name = "Cantidad", nullable = false )
-  private int cantidad;
+  private Integer cantidad;
 
   @Column (name = "ID_Producto", nullable = false)
   private Long ID_Producto;
@@ -22,7 +22,7 @@ public class ShoppingCart {
   public ShoppingCart() {
   }
 
-  public ShoppingCart(Long ID_Carrito, Float valor_total, int cantidad, Long ID_Producto) {
+  public ShoppingCart(Long ID_Carrito, Float valor_total, Integer cantidad, Long ID_Producto) {
     this.ID_Carrito = ID_Carrito;
     this.valor_total = valor_total;
     this.cantidad = cantidad;
@@ -45,11 +45,11 @@ public class ShoppingCart {
     this.valor_total = valor_total;
   }
 
-  public int getCantidad() {
+  public Integer getCantidad() {
     return cantidad;
   }
 
-  public void setCantidad(int cantidad) {
+  public void setCantidad(Integer cantidad) {
     this.cantidad = cantidad;
   }
 
