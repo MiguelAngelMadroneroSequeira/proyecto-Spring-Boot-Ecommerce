@@ -29,7 +29,7 @@ public class PagoController {
   }
 
   @DeleteMapping("/{pagoId}")
-  public void deletePago(int pagoId){
+  public void deletePago(@PathVariable int pagoId){
     pagoService.eliminarPago(pagoId);
   }
 }
