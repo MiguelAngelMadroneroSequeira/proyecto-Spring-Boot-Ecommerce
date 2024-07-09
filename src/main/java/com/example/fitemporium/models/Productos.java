@@ -1,12 +1,14 @@
 package com.example.fitemporium.models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.List;
 
 @Entity
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Productos")
 public class Productos {
 
@@ -18,16 +20,9 @@ public class Productos {
   private String imagen;
   private int stock;
 
-  public Productos() {
-  }
+  @OneToMany(mappedBy = "producto_carrito_id")
+  private List<ShoppingCart> listaCarritos;
 
-  public Productos(Long id_producto, String nombre, Float valorUnitario, String imagen, int stock) {
-    this.id_producto = id_producto;
-    this.nombre = nombre;
-    this.valorUnitario = valorUnitario;
-    this.imagen = imagen;
-    this.stock = stock;
-  }
-
-
+  @OneToMany(mappedBy = "producto_orden_id")
+  private List<Orden> listaOrdenes;
 }
