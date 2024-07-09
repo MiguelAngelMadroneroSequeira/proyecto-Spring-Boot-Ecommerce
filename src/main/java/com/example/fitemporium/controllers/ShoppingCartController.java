@@ -1,8 +1,8 @@
-package com.example.fitemporium.Controller;
+package com.example.fitemporium.controllers;
 
 
-import com.example.fitemporium.Model.ShoppingCart;
-import com.example.fitemporium.Service.ShoppingCartService;
+import com.example.fitemporium.models.ShoppingCart;
+import com.example.fitemporium.services.ShoppingCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,9 +24,9 @@ public class ShoppingCartController {
     return shoppingCartService.agregarListaCarrito(lista);
   }
 
-  @DeleteMapping("/{id}")
-  public void deleteShoppingCart(@PathVariable Long ID_Carrito){
-    shoppingCartService.eliminarListaCarrito(ID_Carrito);
+  @DeleteMapping("/{id_carrito}")
+  public void deleteShoppingCart(@PathVariable Long id_carrito){
+    shoppingCartService.eliminarListaCarrito(id_carrito);
   }
 
 }

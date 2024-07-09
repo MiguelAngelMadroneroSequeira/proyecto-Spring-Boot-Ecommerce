@@ -1,4 +1,4 @@
-package com.example.fitemporium.Model;
+package com.example.fitemporium.models;
 
 import jakarta.persistence.*;
 
@@ -8,33 +8,33 @@ public class ShoppingCart {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long ID_Carrito;
+  private Long id_carrito;
 
   @Column (name = "Valor_Total", nullable = false)
   private Float valor_total;
 
   @Column (name = "Cantidad", nullable = false )
-  private int cantidad;
+  private Integer cantidad;
 
   @Column (name = "ID_Producto", nullable = false)
-  private Long ID_Producto;
+  private Long id_producto;
 
   public ShoppingCart() {
   }
 
-  public ShoppingCart(Long ID_Carrito, Float valor_total, int cantidad, Long ID_Producto) {
-    this.ID_Carrito = ID_Carrito;
+  public ShoppingCart(Long id_carrito, Float valor_total, Integer cantidad, Long id_producto) {
+    this.id_carrito = id_carrito;
     this.valor_total = valor_total;
     this.cantidad = cantidad;
-    this.ID_Producto = ID_Producto;
+    this.id_producto = id_producto;
   }
 
-  public Long getID_Carrito() {
-    return ID_Carrito;
+  public Long getId_carrito() {
+    return id_carrito;
   }
 
-  public void setID_Carrito(Long ID_Carrito) {
-    this.ID_Carrito = ID_Carrito;
+  public void setId_carrito(Long id_carrito) {
+    this.id_carrito = id_carrito;
   }
 
   public Float getValor_total() {
@@ -45,19 +45,19 @@ public class ShoppingCart {
     this.valor_total = valor_total;
   }
 
-  public int getCantidad() {
+  public Integer getCantidad() {
     return cantidad;
   }
 
-  public void setCantidad(int cantidad) {
+  public void setCantidad(Integer cantidad) {
     this.cantidad = cantidad;
   }
 
-  public Long getID_Producto() {
-    return ID_Producto;
+  public Long getId_producto() {
+    return id_producto;
   }
 
-  public void setID_Producto(Long ID_Producto) {
-    this.ID_Producto = ID_Producto;
+  public void setId_producto(Long id_producto) {
+    this.id_producto = id_producto;
   }
 }
