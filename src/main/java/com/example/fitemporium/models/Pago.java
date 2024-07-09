@@ -5,13 +5,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@Entity
 @Table(name = "pagos")
 public class Pago {
 
@@ -31,6 +29,13 @@ public class Pago {
   @Column (name = "Metodo_pago", nullable = false)
   private String metodoPago;
 
+  @ManyToOne
+  @JoinColumn(name = "orden_id")
+  private Orden orden_id;
+
+  @ManyToOne
+  @JoinColumn(name = "cliente_pago_id")
+  private Clientes cliente_pago_id;
 
 }
 
