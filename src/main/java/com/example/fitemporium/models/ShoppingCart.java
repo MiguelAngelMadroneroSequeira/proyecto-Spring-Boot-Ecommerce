@@ -19,6 +19,10 @@ public class ShoppingCart {
   @Column (name = "ID_Producto", nullable = false)
   private Long id_producto;
 
+  @ManyToOne
+  @JoinColumn(name = "cliente_id")
+  private Clientes cliente;
+
   public ShoppingCart() {
   }
 

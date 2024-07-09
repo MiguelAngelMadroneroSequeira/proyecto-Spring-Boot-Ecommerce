@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "clientes")
 public class Clientes {
@@ -24,6 +26,8 @@ public class Clientes {
   @Column (name = "Correo_electronico", nullable = false)
   private String correoElectronico;
 
+  @OneToMany(mappedBy = "cliente_id")
+  private List<ShoppingCart> listaCarritos;
 
 
 
