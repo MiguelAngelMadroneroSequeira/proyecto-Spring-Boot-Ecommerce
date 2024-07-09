@@ -24,7 +24,7 @@ public class ShoppingCartController {
     return shoppingCartService.agregarListaCarrito(lista);
   }
 
-  @DeleteMapping("/{id}")
+  @DeleteMapping("/{id_carrito}")
   public void deleteShoppingCart(@PathVariable Long id_carrito){
     shoppingCartService.eliminarListaCarrito(id_carrito);
   }

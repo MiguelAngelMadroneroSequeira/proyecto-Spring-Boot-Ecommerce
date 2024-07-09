@@ -17,7 +17,6 @@ public class Pago {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-
   private int id_pago;
 
   @Column (name = "ID_Orden", nullable = false)

@@ -29,11 +29,11 @@ public class ShoppingCart {
     this.id_producto = id_producto;
   }
 
-  public Long getID_Carrito() {
+  public Long getId_carrito() {
     return id_carrito;
   }
 
-  public void setID_Carrito(Long id_carrito) {
+  public void setId_carrito(Long id_carrito) {
     this.id_carrito = id_carrito;
   }
 
@@ -53,11 +53,11 @@ public class ShoppingCart {
     this.cantidad = cantidad;
   }
 
-  public Long getID_Producto() {
+  public Long getId_producto() {
     return id_producto;
   }
 
-  public void setID_Producto(Long id_producto) {
+  public void setId_producto(Long id_producto) {
     this.id_producto = id_producto;
   }
 }

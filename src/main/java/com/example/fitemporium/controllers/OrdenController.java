@@ -29,13 +29,13 @@ public class OrdenController {
     return ordenService.getListaOrdenes();
   }
 
-  @PostMapping
+  @PostMapping("/agregar")
   public ResponseEntity<Orden> agregarOrden(@RequestBody Orden orden) {
     Orden agregarOrden = ordenService.agregarOrden(orden);
     return ResponseEntity.status(HttpStatus.CREATED).body(agregarOrden);
   }
 
-  @DeleteMapping("/{id}")
+  @DeleteMapping("/{ordenId}")
   public void eliminarOrden(@PathVariable Long ordenId) {
     ordenService.eliminarOrden(ordenId);
   }

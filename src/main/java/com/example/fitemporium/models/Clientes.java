@@ -1,6 +1,8 @@
 package com.example.fitemporium.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 @Entity
 @Table(name = "clientes")
@@ -8,68 +10,71 @@ public class Clientes {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long ID_Cliente;
+  private Long idCliente;
 
   @Column (name = "Nombre", nullable = false)
-  private String Nombre;
+  private String nombre;
 
   @Column (name = "Apellido", nullable = false)
-  private String Apellido;
+  private String apellido;
 
   @Column (name = "Telefono", nullable = false)
-  private String Telefono;
+  private String telefono;
 
   @Column (name = "Correo_electronico", nullable = false)
-  private String Correo_electronico;
+  private String correoElectronico;
+
+
+
 
   public Clientes() {
   }
 
-  public Clientes(Long ID_Cliente, String nombre, String apellido, String telefono, String correo_electronico) {
-    this.ID_Cliente = ID_Cliente;
-    Nombre = nombre;
-    Apellido = apellido;
-    Telefono = telefono;
-    Correo_electronico = correo_electronico;
+  public Clientes(Long idCliente, String nombre, String apellido, String telefono, String correoElectronico) {
+    this.idCliente = idCliente;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.telefono = telefono;
+    this.correoElectronico = correoElectronico;
   }
 
-  public String getCorreo_electronico() {
-    return Correo_electronico;
+  public Long getIdCliente() {
+    return idCliente;
   }
 
-  public void setCorreo_electronico(String correo_electronico) {
-    Correo_electronico = correo_electronico;
-  }
-
-  public String getTelefono() {
-    return Telefono;
-  }
-
-  public void setTelefono(String telefono) {
-    Telefono = telefono;
-  }
-
-  public String getApellido() {
-    return Apellido;
-  }
-
-  public void setApellido(String apellido) {
-    Apellido = apellido;
+  public void setIdCliente(Long idCliente) {
+    this.idCliente = idCliente;
   }
 
   public String getNombre() {
-    return Nombre;
+    return nombre;
   }
 
   public void setNombre(String nombre) {
-    Nombre = nombre;
+    this.nombre = nombre;
   }
 
-  public Long getID_Cliente() {
-    return ID_Cliente;
+  public String getApellido() {
+    return apellido;
   }
 
-  public void setID_Cliente(Long ID_Cliente) {
-    this.ID_Cliente = ID_Cliente;
+  public void setApellido(String apellido) {
+    this.apellido = apellido;
+  }
+
+  public String getTelefono() {
+    return telefono;
+  }
+
+  public void setTelefono(String telefono) {
+    this.telefono = telefono;
+  }
+
+  public String getCorreoElectronico() {
+    return correoElectronico;
+  }
+
+  public void setCorreoElectronico(String correoElectronico) {
+    this.correoElectronico = correoElectronico;
   }
 }

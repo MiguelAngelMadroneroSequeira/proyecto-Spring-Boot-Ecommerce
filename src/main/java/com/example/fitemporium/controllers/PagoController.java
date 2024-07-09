@@ -28,7 +28,7 @@ public class PagoController {
     return pagoService.agregarPago(pago);
   }
 
-  @DeleteMapping("/{id}")
+  @DeleteMapping("/{pagoId}")
   public void deletePago(int pagoId){
     pagoService.eliminarPago(pagoId);
   }
