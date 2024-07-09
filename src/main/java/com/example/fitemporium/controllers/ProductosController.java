@@ -1,8 +1,8 @@
-package com.example.fitemporium.Controller;
+package com.example.fitemporium.controllers;
 
 
-import com.example.fitemporium.Model.Productos;
-import com.example.fitemporium.Service.ProductosService;
+import com.example.fitemporium.models.Productos;
+import com.example.fitemporium.services.ProductosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,9 +25,9 @@ public class ProductosController {
 
   }
 
-  @DeleteMapping("/{id}")
-  public void deleteProducto(@PathVariable Long ID_Producto){
-    productosService.deleteProducto(ID_Producto);
+  @DeleteMapping("/{id_Producto}")
+  public void deleteProducto(@PathVariable Long id_Producto){
+    productosService.deleteProducto(id_Producto);
 
   }
 

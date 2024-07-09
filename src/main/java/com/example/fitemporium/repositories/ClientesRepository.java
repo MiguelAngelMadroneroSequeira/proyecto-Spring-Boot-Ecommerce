@@ -1,6 +1,6 @@
-package com.example.fitemporium.Repository;
+package com.example.fitemporium.repositories;
 
-import com.example.fitemporium.Model.Clientes;
+import com.example.fitemporium.models.Clientes;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

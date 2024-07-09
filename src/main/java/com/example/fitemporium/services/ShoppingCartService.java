@@ -1,8 +1,8 @@
-package com.example.fitemporium.Service;
+package com.example.fitemporium.services;
 
 
-import com.example.fitemporium.Model.ShoppingCart;
-import com.example.fitemporium.Repository.ShoppingCartRepository;
+import com.example.fitemporium.models.ShoppingCart;
+import com.example.fitemporium.repositories.ShoppingCartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class ShoppingCartService {
     return  shoppingCartRepository.save(lista);
   }
 
-  public void eliminarListaCarrito(Long ID_Carrito){
-    shoppingCartRepository.deleteById(ID_Carrito);
+  public void eliminarListaCarrito(Long id_carrito){
+    shoppingCartRepository.deleteById(id_carrito);
   }
 }

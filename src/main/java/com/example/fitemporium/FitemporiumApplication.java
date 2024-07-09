@@ -9,5 +9,5 @@ public class FitemporiumApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FitemporiumApplication.class, args);
 	}
-
+	
 }
