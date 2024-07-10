@@ -1,6 +1,5 @@
 package com.example.fitemporium.controllers;
 
-
 import com.example.fitemporium.models.Orden;
 import com.example.fitemporium.services.OrdenService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +16,9 @@ public class OrdenController {
   private OrdenService ordenService;
 
   @Autowired
-
   public OrdenController(OrdenService ordenService) {
     this.ordenService = ordenService;
-
   }
-
 
   @GetMapping("/obtener")
   public List<Orden> getAllOrdenes() {
@@ -38,5 +34,11 @@ public class OrdenController {
   @DeleteMapping("/{ordenId}")
   public void eliminarOrden(@PathVariable Long ordenId) {
     ordenService.eliminarOrden(ordenId);
+  }
+
+  @PutMapping("/{ordenId}")
+  public ResponseEntity<Orden> actualizarOrden(@PathVariable Long ordenId, @RequestBody Orden ordenDetalles) {
+    Orden updatedOrden = ordenService.actualizarOrden(ordenId, ordenDetalles);
+    return ResponseEntity.ok(updatedOrden);
   }
 }

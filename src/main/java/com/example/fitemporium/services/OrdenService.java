@@ -13,7 +13,6 @@ public class OrdenService {
   @Autowired
   private OrdenRepository ordenRepository;
 
-
   public List<Orden> getListaOrdenes() {
     return ordenRepository.findAll();
   }
@@ -24,5 +23,21 @@ public class OrdenService {
 
   public void eliminarOrden(Long ordenId) {
     ordenRepository.deleteById(ordenId);
+  }
+
+  public Orden actualizarOrden(Long ordenId, Orden ordenDetalles) {
+    Orden orden = ordenRepository.findById(ordenId)
+            .orElseThrow(() -> new RuntimeException("Orden no encontrada con id: " + ordenId));
+
+    orden.setProductoId(ordenDetalles.getProductoId());
+    orden.setFechaOrden(ordenDetalles.getFechaOrden());
+    orden.setCantidadOrden(ordenDetalles.getCantidadOrden());
+    orden.setEstadoOrden(ordenDetalles.getEstadoOrden());
+    orden.setListaPagos(ordenDetalles.getListaPagos());
+    orden.setId_orden(ordenDetalles.getId_orden());
+    orden.setProducto_orden_id(ordenDetalles.getProducto_orden_id());
+
+
+    return ordenRepository.save(orden);
   }
 }
