@@ -20,6 +20,7 @@ public class Productos {
   private String descripcion;
   private String imagen;
   private int stock;
+  private String categoria;
 
   @OneToMany(mappedBy = "producto_carrito_id")
   private List<ShoppingCart> listaCarritos;
@@ -28,7 +29,7 @@ public class Productos {
   private List<Orden> listaOrdenes;
 
 
-  public Productos(String nombre, Float valorUnitario, String descripcion, String imagen, int stock, List<ShoppingCart> listaCarritos, List<Orden> listaOrdenes) {
+  public Productos(String nombre, Float valorUnitario, String descripcion, String imagen, int stock, List<ShoppingCart> listaCarritos, List<Orden> listaOrdenes, String categoria) {
     this.nombre = nombre;
     this.valorUnitario = valorUnitario;
     this.imagen = imagen;
@@ -36,8 +37,16 @@ public class Productos {
     this.listaCarritos = listaCarritos;
     this.listaOrdenes = listaOrdenes;
     this.descripcion = descripcion;
+    this.categoria= categoria;
   }
 
+  public String getCategoria() {
+    return categoria;
+  }
+
+  public void setCategoria(String categoria) {
+    this.categoria = categoria;
+  }
 
   public Long getId_producto() {
     return id_producto;
