@@ -17,6 +17,7 @@ public class Productos {
   private Long id_producto;
   private String nombre;
   private Float valorUnitario;
+  private String descripcion;
   private String imagen;
   private int stock;
 
@@ -27,13 +28,14 @@ public class Productos {
   private List<Orden> listaOrdenes;
 
 
-  public Productos(String nombre, Float valorUnitario, String imagen, int stock, List<ShoppingCart> listaCarritos, List<Orden> listaOrdenes) {
+  public Productos(String nombre, Float valorUnitario, String descripcion, String imagen, int stock, List<ShoppingCart> listaCarritos, List<Orden> listaOrdenes) {
     this.nombre = nombre;
     this.valorUnitario = valorUnitario;
     this.imagen = imagen;
     this.stock = stock;
     this.listaCarritos = listaCarritos;
     this.listaOrdenes = listaOrdenes;
+    this.descripcion = descripcion;
   }
 
 
@@ -75,6 +77,14 @@ public class Productos {
 
   public void setStock(int stock) {
     this.stock = stock;
+  }
+
+  public String getDescripcion() {
+    return descripcion;
+  }
+
+  public void setDescripcion(String descripcion) {
+    this.descripcion = descripcion;
   }
 
   public List<ShoppingCart> getListaCarritos() {
