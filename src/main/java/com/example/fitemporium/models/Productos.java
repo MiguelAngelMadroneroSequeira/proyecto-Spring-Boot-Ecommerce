@@ -21,6 +21,10 @@ public class Productos {
   private String imagen;
   private int stock;
   private String categoria;
+  private String modalimagen1;
+  private String modalimagen2;
+  private String modalimagen3;
+
 
   @OneToMany(mappedBy = "producto_carrito_id")
   private List<ShoppingCart> listaCarritos;
@@ -29,7 +33,7 @@ public class Productos {
   private List<Orden> listaOrdenes;
 
 
-  public Productos(String nombre, Float valorUnitario, String descripcion, String imagen, int stock, List<ShoppingCart> listaCarritos, List<Orden> listaOrdenes, String categoria) {
+  public Productos(String nombre, Float valorUnitario, String descripcion, String imagen, int stock, List<ShoppingCart> listaCarritos, List<Orden> listaOrdenes, String categoria, String modalimagen1, String modalimagen2, String modalimagen3) {
     this.nombre = nombre;
     this.valorUnitario = valorUnitario;
     this.imagen = imagen;
@@ -38,6 +42,10 @@ public class Productos {
     this.listaOrdenes = listaOrdenes;
     this.descripcion = descripcion;
     this.categoria= categoria;
+    this.modalimagen1=modalimagen1;
+    this.modalimagen2=modalimagen2;
+    this.modalimagen3=modalimagen3;
+
   }
 
   public String getCategoria() {
@@ -110,5 +118,29 @@ public class Productos {
 
   public void setListaOrdenes(List<Orden> listaOrdenes) {
     this.listaOrdenes = listaOrdenes;
+  }
+
+  public String getModalimagen1() {
+    return modalimagen1;
+  }
+
+  public void setModalimagen1(String modalimagen1) {
+    this.modalimagen1 = modalimagen1;
+  }
+
+  public String getModalimagen2() {
+    return modalimagen2;
+  }
+
+  public void setModalimagen2(String modalimagen2) {
+    this.modalimagen2 = modalimagen2;
+  }
+
+  public String getModalimagen3() {
+    return modalimagen3;
+  }
+
+  public void setModalimagen3(String modalimagen3) {
+    this.modalimagen3 = modalimagen3;
   }
 }
